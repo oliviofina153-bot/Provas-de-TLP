@@ -14,7 +14,7 @@
     }
 
     body {
-      background: #f1f5f9;
+      background: #040404;
     }
 
     
@@ -47,6 +47,174 @@
       font-weight: bold;
     }
 
+.secao-moderna {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+ 
+.secao-moderna h2 {
+  color: #2b404a;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.secao-moderna h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background: #404649;
+  transition: 0.4s;
+}
+
+.secao-moderna h2:hover::after {
+  width: 100%;
+}
+ 
+
+.lista-profissional {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-profissional li {
+  background: #918c8c;
+  margin-bottom: 15px;
+  padding: 18px 20px;
+  border-left: 5px solid #5a676e;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #1640a0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.lista-profissional li::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #38444a;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+.lista-profissional li:hover::before {
+  left: 0;
+}
+
+.lista-profissional li:hover {
+  transform: translateX(10px);
+  color: #024dc7;
+  border-left: 5px solid #024dc7;
+}
+
+.lista-profissional li span {
+  position: relative;
+  z-index: 1;
+}
+
+ 
+.lista-profissional li:first-child {
+  border-left-color: #0f172a;
+}
+
+.lista-profissional li:last-child {
+  border-left-color: #0284c7;
+}
+
+.lista-profissional li:nth-child(even) {
+  background: #f1f5f9;
+}
+
+ 
+
+.tabela-profissional {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.tabela-profissional thead {
+  background: #0f172a;
+  color: #e0f2fe;
+}
+
+.tabela-profissional th,
+.tabela-profissional td {
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.tabela-profissional tbody tr {
+  background: #ffffff;
+  border-bottom: 1px solid #bae6fd;
+  transition: 0.3s;
+}
+
+ 
+.tabela-profissional tbody tr:hover {
+  background: #bae6fd;
+  transform: scale(1.01);
+}
+
+ 
+.tabela-profissional tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+ 
+.tabela-profissional td:hover {
+  background: #024dc7;
+  color: white;
+  font-weight: bold;
+}
+
+ 
+
+.tabela-mesclada {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabela-mesclada th {
+  background: #2d5c74;
+  color: white;
+  padding: 15px;
+}
+
+.tabela-mesclada td {
+  padding: 15px;
+  text-align: center;
+  background: #ffffff;
+  transition: 0.3s;
+  border: 1px solid #4682a2;
+}
+
+.tabela-mesclada tr:hover td {
+  background: #f1f5f9;
+}
+
+.tabela-mesclada td:hover {
+  background: #0f172a;
+  color: #e0f2fe;
+}
   
   </style>
 </head>
@@ -63,6 +231,88 @@
   </nav>
 </header>
 
+<section class="secao-moderna">
+
+  <div>
+    <center><h2>Competências do Desenvolvedor Web</h2></center>
+    <ul class="lista-profissional">
+      <li><span>Planejamento e Organização de Projetos Digitais</span></li>
+      <li><span>Criação de Interfaces Responsivas</span></li>
+      <li><span>Otimização de Performance e SEO</span></li>
+      <li><span>Implementação de Segurança Básica</span></li>
+      <li><span>Manutenção e Atualização de Sistemas</span></li>
+    </ul>
+  </div>
+
+  <div>
+   <center> <h2>Planeamento Semanal de Estudos</h2></center>
+    <table class="tabela-profissional">
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Conteúdo</th>
+          <th>Duração</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Segunda</td>
+          <td>Revisão de HTML</td>
+          <td>2h</td>
+          <td>Concluído</td>
+        </tr>
+        <tr>
+          <td>Terça</td>
+          <td>Seletores CSS Avançados</td>
+          <td>3h</td>
+          <td>Em Progresso</td>
+        </tr>
+        <tr>
+          <td>Quarta</td>
+          <td>Flexbox e Grid</td>
+          <td>2h</td>
+          <td>Pendente</td>
+        </tr>
+        <tr>
+          <td>Quinta</td>
+          <td>Projeto Prático</td>
+          <td>4h</td>
+          <td>Pendente</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+  <center>  <h2> Tabela Mesclada</h2></center>
+    <table class="tabela-mesclada">
+      <tr>
+        <th rowspan="2">Fase</th>
+        <th colspan="2">Detalhes</th>
+      </tr>
+      <tr>
+        <th>Atividade</th>
+        <th>Responsável</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Planejamento</td>
+        <td>Análise de Requisitos</td>
+        <td>Equipe Técnica</td>
+      </tr>
+      <tr>
+        <td>Definição de Layout</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>Desenvolvimento</td>
+        <td>Codificação do Sistema</td>
+        <td>Programador</td>
+      </tr>
+    </table>
+  </div>
+
+</section>
 
 
 </body>
